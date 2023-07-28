@@ -1,41 +1,41 @@
 import React from 'react'
-import {Text,View,StyleSheet, TouchableOpacity, ImageBackground, Image, Platform, SafeAreaView, StatusBar} from 'react-native'
+import { Text, View, StyleSheet, TouchableOpacity, ImageBackground, Image, Platform, SafeAreaView, StatusBar } from 'react-native'
 export default class Home extends React.Component {
-    render(){
-        return(
-            <View style = {styles.container}>
-               <SafeAreaView style = {styles.droidSafeArea} />
-               <ImageBackground source={require("../assets/bg_image.png")} style = {styles.backgroundImage}>
-                <View style = {styles.titleBar}>
-                    <Text style = {styles.titleText}>
-                        App Rastreador EEI
-                    </Text>
-                </View>
-                <TouchableOpacity style = {styles.routeCard} onPress={()=>{this.props.navigation.navigate('issLocation')}}>
-                    <Text style = {styles.routeText}>
-                        Localização Da EEI
-                    </Text>
-                    <Text style = {styles.knowMore}>
-                    {"Saiba Mais -->"}
-                    </Text>
-                    <Text style = {styles.bgDigit}>
-                        1
-                    </Text>
-                    <Image source={require("../assets/iss_icon.png")} style = {styles.iconImage} />
-                </TouchableOpacity>
-                <TouchableOpacity style = {styles.routeCard} onPress={()=>{this.props.navigation.navigate("meteor")}}>
-                    <Text style = {styles.routeText}>
-                        Meteoros
-                    </Text>
-                    <Text style = {styles.knowMore}>
-                    {"Saiba Mais -->"}
-                    </Text>
-                    <Text style = {styles.bgDigit}>
-                        2
-                    </Text>
-                    <Image source={require("../assets/meteor_icon.png")} style = {styles.iconImage} />
-                </TouchableOpacity>
-               </ImageBackground>
+    render() {
+        return (
+            <View style={styles.container}>
+                <SafeAreaView style={styles.droidSafeArea} />
+                <ImageBackground source={require("../assets/bg_image.png")} style={styles.backgroundImage}>
+                    <View style={styles.titleBar}>
+                        <Text style={styles.titleText}>
+                            App Rastreador EEI
+                        </Text>
+                    </View>
+                    <TouchableOpacity style={styles.routeCard} onPress={() => { this.props.navigation.navigate('issLocation') }}>
+                        <Text style={styles.routeText}>
+                            Localização Da EEI
+                        </Text>
+                        <Text style={styles.knowMore}>
+                            {"Saiba Mais -->"}
+                        </Text>
+                        <Text style={styles.bgDigit}>
+                            1
+                        </Text>
+                        <Image source={require("../assets/iss_icon.png")} style={styles.iconImage} />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.routeCard} onPress={() => { this.props.navigation.navigate("meteor") }}>
+                        <Text style={styles.routeText}>
+                            Meteoros
+                        </Text>
+                        <Text style={styles.knowMore}>
+                            {"Saiba Mais -->"}
+                        </Text>
+                        <Text style={styles.bgDigit}>
+                            2
+                        </Text>
+                        <Image source={require("../assets/meteor_icon.png")} style={styles.iconImage} />
+                    </TouchableOpacity>
+                </ImageBackground>
             </View>
         )
     }
